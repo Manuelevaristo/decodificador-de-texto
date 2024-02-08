@@ -115,8 +115,6 @@ body {
   flex-direction: column;
   width: 84%;
   gap: 33px;
-  border: dotted 1px #343a40;
-  border-radius: 16px;
 }
 .apresentacao__conteudo2__texto__titulo {
   font-family: "Inter", sans-serif;
@@ -143,6 +141,7 @@ body {
   text-align: center;
   color: #0a3871;
   border-radius: 24px;
+  display: none;
 }
 
 @media screen and (max-width: 768px) {

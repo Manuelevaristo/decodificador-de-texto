@@ -2,6 +2,29 @@
 let titulo = document.querySelector(".apresentacao__conteudo2__texto__titulo");
 let imagem = document.querySelector(".apresentacao__conteudo2__imagem");
 
+// Função para copiar o texto criptografado ou descriptografado
+function copiarTexto() {
+  // Seleciona o elemento que contém o texto criptografado ou descriptografado
+  let textoParagrafo = document.querySelector(
+    ".apresentacao__conteudo2__texto__paragrafo"
+  );
+
+  // Cria um elemento de texto oculto para copiar o conteúdo
+  let textoOculto = document.createElement("textarea");
+  textoOculto.value = textoParagrafo.textContent;
+  document.body.appendChild(textoOculto);
+
+  // Seleciona e copia o texto do elemento oculto
+  textoOculto.select();
+  document.execCommand("copy");
+
+  // Remove o elemento de texto oculto
+  document.body.removeChild(textoOculto);
+
+  // Exibe uma mensagem de confirmação para o usuário
+  alert("Texto copiado para a área de transferência!");
+}
+
 function criptografar() {
   let textoInput = document.querySelector(
     ".apresentacao__conteudo__input__input"
@@ -39,8 +62,16 @@ function criptografar() {
 
     titulo.remove();
     imagem.remove();
+    document.getElementById("copiarTexto").style.display = "inline-block";
   } else {
     alert("Texto não identificado");
+    var textarea = document.querySelector(
+      ".apresentacao__conteudo__input__input"
+    );
+    textarea.value = "";
+    textarea.placeholder = "Digite seu texto";
+    textarea.focus();
+    return;
   }
 }
 
@@ -52,7 +83,6 @@ function descriptografar() {
   ).value;
 
   if (textoCriptografado.trim() !== "") {
-
     if (!/^[a-z\s.,áàãâéêíóôõúç""'']+$/.test(textoCriptografado)) {
       alert(
         "Apenas letras minúsculas, espaços e caracteres específicos são permitidos."
@@ -74,7 +104,15 @@ function descriptografar() {
     ).textContent = textoDescriptografado;
     titulo.remove();
     imagem.remove();
+    document.getElementById("copiarTexto").style.display = "inline-block";
   } else {
     alert("texto não identificado");
+    var textarea = document.querySelector(
+      ".apresentacao__conteudo__input__input"
+    );
+    textarea.value = "";
+    textarea.placeholder = "Digite seu texto";
+    textarea.focus();
+    return;
   }
 }
