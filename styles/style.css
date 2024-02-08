@@ -179,6 +179,9 @@ body {
   .apresentacao__conteudo2 {
     width: 91.46%;
   }
+  .apresentacao__conteudo__botao {
+    flex-direction: column;
+  }
   .apresentacao__conteudo__botoes {
     width: 100%;
     border-radius: 24px;
