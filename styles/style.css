@@ -25,7 +25,6 @@ body {
 }
 
 .apresentacao__conteudo {
-  /* border: solid 1px #0a3871; */
   align-items: center;
   display: flex;
   width: 47.22%;
@@ -36,9 +35,7 @@ body {
 .apresentacao__conteudo__input {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  gap: 62vh;
-  /* gap: 39.68rem; */
+  gap: 20rem;
 }
 
 .apresentacao__conteudo__input__input {
@@ -50,11 +47,9 @@ body {
   width: 100%;
   resize: none;
   min-height: 3rem;
-  /* text-align: center; */
   text-align: justify;
   border: none;
   height: auto;
-  /* max-height: 200px; */
   overflow-y: auto;
 }
 .apresentacao__conteudo__input__input::placeholder {
