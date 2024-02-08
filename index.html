@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Decodificador</title>
+  </head>
+  <body>
+    <header></header>
+    <main class="apresentacao">
+      <section class="apresentacao__logo">
+        <img
+          class="apresentacao__logo__imagem"
+          src="./assets/Logo.png"
+          alt="ggggg"
+        />
+      </section>
+      <section class="apresentacao__conteudo">
+        <div class="apresentacao__conteudo__input">
+          <textarea
+            class="apresentacao__conteudo__input__input"
+            placeholder="Digite seu texto"
+          ></textarea>
+
+          <div class="apresentacao__conteudo_input__mensagem">
+            <img
+              class="apresentacao__conteudo__input__mensagem__simbolo"
+              src="./assets/bi_exclamation-circle-fill.png"
+              alt="ghh"
+            />
+            <p class="apresentacao__conteudo__input__mensagem__texto">
+              Apenas letras minúsculas e sem acento.
+            </p>
+          </div>
+        </div>
+
+        <div class="apresentacao__conteudo__botao">
+          <button
+            
+            onclick="criptografar()"
+            class="apresentacao__conteudo__botoes"
+          >
+            Criptografar
+          </button>
+          <button
+            onclick="descriptografar()"
+            class="apresentacao__conteudo__botoes"
+            id="descriptografar__botao"
+          >
+            Descriptografar
+          </button>
+        </div>
+      </section>
+      <section class="apresentacao__conteudo2">
+        <img
+          class="apresentacao__conteudo2__imagem"
+          src="./assets/High quality products 1 1.svg"
+          alt="ddddd"
+        />
+        <div class="apresentacao__conteudo2__texto">
+          <h2 class="apresentacao__conteudo2__texto__titulo">
+            Nenhuma mensagem encontrada
+          </h2>
+          <p class="apresentacao__conteudo2__texto__paragrafo">
+            Digite um texto que você deseja criptografar ou descriptografar
+          </p>
+        </div>
+        <button id="copiarTexto" onclick="copiarTexto()"> copiar texto</button>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="app.js" defer></script>
+  </body>
+</html>
