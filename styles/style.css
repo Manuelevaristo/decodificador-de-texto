@@ -161,6 +161,10 @@ body {
   .apresentacao__conteudo {
     width: 89.58%;
   }
+  .apresentacao__conteudo__input {
+
+    gap: 15rem;
+  }
   .apresentacao__conteudo2 {
     width: 89.58%;
   }
